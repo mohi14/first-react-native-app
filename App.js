@@ -6,10 +6,10 @@ export default function App() {
 
   // return <CoreComponents />
   return <View style={styles.container}>
-    <View style={[styles.box, styles.lightblueBg]}>
+    <View style={[styles.box, styles.lightblueBg, styles.boxShadow]}>
       <Text>Lightblue box</Text>
     </View>
-    <View style={[styles.box, styles.lightGreenBg]}>
+    <View style={[styles.box, styles.lightGreenBg, styles.androidShadow]}>
       <Text>Lightgreen box</Text>
     </View>
 
@@ -23,8 +23,8 @@ const styles = StyleSheet.create({
     padding: 60
   },
   box: {
-    width: 100,
-    height: 100,
+    width: 250,
+    height: 250,
     // padding: 10,
     paddingHorizontal: 10,
     paddingVertical: 20,
@@ -38,6 +38,18 @@ const styles = StyleSheet.create({
   },
   lightGreenBg: {
     backgroundColor: "lightgreen",
+  },
+  boxShadow: {
+    shadowColor: "#333333",
+    shadowOffset: {
+      width: 6,
+      height: 6
+    },
+    shadowOpacity: 0.6,
+    shadowRadius: 4
+  },
+  androidShadow: {
+    elevation: 10,
   }
 })
 
